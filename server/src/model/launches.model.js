@@ -31,7 +31,20 @@ const addNewLaunch = (launch) => {
     })
   );
 };
+
+const existsLaunchById = (launchId) => {
+  return launches.has(launchId);
+};
+
+const abortLaunchById = (launchId) => {
+  const aborted = launches.get(launchId);
+  aborted.upcoming = false;
+  aborted.success = false;
+  return aborted;
+};
 module.exports = {
   getAllLaunches,
   addNewLaunch,
+  existsLaunchById,
+  abortLaunchById,
 };
