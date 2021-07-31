@@ -1,0 +1,47 @@
+8 habitanble plants found!
+Server run on port 3001 
+8 habitanble plants found!
+Server run on port 3001 
+8 habitanble plants found!
+Server run on port 3001 
+8 habitanble plants found!
+Server run on port 3001 
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET / HTTP/1.1" 200 2573 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /static/js/2.18b0d739.chunk.js HTTP/1.1" 200 476041 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /static/js/main.ae49a577.chunk.js HTTP/1.1" 200 14105 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /static/js/main.ae49a577.chunk.js.map HTTP/1.1" 200 29062 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /static/js/2.18b0d739.chunk.js.map HTTP/1.1" 200 1713496 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /sound/click.mp3 HTTP/1.1" 200 2688 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /sound/abort.mp3 HTTP/1.1" 200 11548 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /sound/success.mp3 HTTP/1.1" 200 98497 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /sound/typing.mp3 HTTP/1.1" 200 5760 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /sound/deploy.mp3 HTTP/1.1" 200 5376 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /sound/warning.mp3 HTTP/1.1" 200 28800 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /img/glow.png HTTP/1.1" 200 455 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /favicon.png HTTP/1.1" 200 4500 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /img/background-large.jpg HTTP/1.1" 200 778461 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /launches HTTP/1.1" 200 181 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /planets HTTP/1.1" 200 9862 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /favicon.png HTTP/1.1" 200 4500 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:16 +0000] "GET /manifest.json HTTP/1.1" 200 306 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+2021-07-24T00:00:00.000Z
+::1 - - [24/Jul/2021:07:00:54 +0000] "POST /launches HTTP/1.1" 201 196 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:00:54 +0000] "GET /launches HTTP/1.1" 200 378 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+2021-07-24T00:00:00.000Z
+::1 - - [24/Jul/2021:07:01:11 +0000] "POST /launches HTTP/1.1" 201 197 "http://localhost:3001/launch" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:01:11 +0000] "GET /launches HTTP/1.1" 200 576 "http://localhost:3001/launch" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:04 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:04 +0000] "GET /static/js/2.18b0d739.chunk.js HTTP/1.1" 304 - "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:04 +0000] "GET /static/js/main.ae49a577.chunk.js HTTP/1.1" 304 - "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:04 +0000] "GET /sound/click.mp3 HTTP/1.1" 304 - "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:04 +0000] "GET /sound/typing.mp3 HTTP/1.1" 304 - "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:04 +0000] "GET /sound/deploy.mp3 HTTP/1.1" 304 - "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:04 +0000] "GET /sound/success.mp3 HTTP/1.1" 304 - "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:04 +0000] "GET /sound/warning.mp3 HTTP/1.1" 304 - "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:04 +0000] "GET /sound/abort.mp3 HTTP/1.1" 304 - "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:04 +0000] "GET /favicon.png HTTP/1.1" 304 - "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:04 +0000] "GET /img/background-large.jpg HTTP/1.1" 304 - "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:04 +0000] "GET /img/glow.png HTTP/1.1" 304 - "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:04 +0000] "GET /launches HTTP/1.1" 200 181 "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:04 +0000] "GET /planets HTTP/1.1" 304 - "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+::1 - - [24/Jul/2021:07:02:05 +0000] "GET /manifest.json HTTP/1.1" 304 - "http://localhost:3001/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"

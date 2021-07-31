@@ -1,6 +1,9 @@
 const path = require("path");
 const fs = require("fs");
 const parse = require("csv-parse");
+
+const planets = require("./planets.mongo");
+const { log } = require("console");
 // Filter by kioinsol (temparetures), koi_prad(radius of the star)
 const isHabitablePlanet = (planet) => {
   return (
@@ -10,8 +13,6 @@ const isHabitablePlanet = (planet) => {
     planet["koi_prad"] < 1.6
   );
 };
-
-const habitablePlanets = [];
 
 const loadPlanetsData = () => {
   return new Promise((resolve, reject) => {
@@ -24,24 +25,42 @@ const loadPlanetsData = () => {
           columns: true,
         })
       )
-      .on("data", (data) => {
-        isHabitablePlanet(data) && habitablePlanets.push(data);
+      .on("data", async (data) => {
+        isHabitablePlanet(data) && savePlanet(data);
       })
       .on("error", (error) => {
         console.log(error);
         reject(err);
       })
-      .on("end", () => {
-        console.log(`${habitablePlanets.length} habitanble plants found!`);
+      .on("end", async () => {
+        const countPlanetsFound = (await getAllPlanets()).length;
+        console.log(`${countPlanetsFound} habitanble plants found!`);
         resolve();
       });
   });
 };
 
-// pasring the data from the fille
+// Return all the planets from the db
+const getAllPlanets = async () => {
+  return await planets.find({}, { __v: 0, _id: 0 });
+};
 
-const getAllPlanets = () => {
-  return habitablePlanets;
+const savePlanet = async (planet) => {
+  try {
+    await planets.updateOne(
+      {
+        keplerName: planet.kepler_name,
+      },
+      {
+        keplerName: planet.kepler_name,
+      },
+      {
+        upsert: true,
+      }
+    );
+  } catch (error) {
+    console.error(`Could not save planet  ${error}`);
+  }
 };
 
 module.exports = {
