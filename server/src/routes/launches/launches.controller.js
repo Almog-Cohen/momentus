@@ -1,16 +1,16 @@
 const { json } = require("express");
 const {
   getAllLaunches,
-  addNewLaunch,
+  scheduleNewLaunch,
   existsLaunchById,
   abortLaunchById,
 } = require("../../model/launches.model");
 
-const httpGetAllLaunches = (req, res) => {
-  return res.json(getAllLaunches());
+const httpGetAllLaunches = async (req, res) => {
+  return res.json(await getAllLaunches());
 };
 
-const httpAddNewLaunch = (req, res) => {
+const httpAddNewLaunch = async (req, res) => {
   const { launch } = req.body;
   if (!launch.mission || !launch.rocket || !launch.launchDate || !launch.target)
     return res.status(400).json({ error: "Missing required launch field" });
@@ -21,18 +21,19 @@ const httpAddNewLaunch = (req, res) => {
 
   launch.launchDate = new Date(launch.launchDate);
   console.log(launch.launchDate);
-  addNewLaunch(launch);
+  await scheduleNewLaunch(launch);
   return res.status(201).json(launch);
 };
 
-const httpAbortLaunch = (req, res) => {
+const httpAbortLaunch = async (req, res) => {
   const launchId = Number(req.params.id);
   //if launch doesn't exists
-  if (!existsLaunchById(launchId))
-    return res.status(404).json({ error: "Launch not found" });
+  const existsLaunch = await existsLaunchById(launchId);
+  if (!existsLaunch) return res.status(404).json({ error: "Launch not found" });
 
   //if launch exists
-  const aborted = abortLaunchById(launchId);
+  const aborted = await abortLaunchById(launchId);
+  if (!aborted) return res.status(400).json({ error: "Launch not aborted" });
   return res.status(200).json(aborted);
 };
 

@@ -3,7 +3,6 @@ const fs = require("fs");
 const parse = require("csv-parse");
 
 const planets = require("./planets.mongo");
-const { log } = require("console");
 // Filter by kioinsol (temparetures), koi_prad(radius of the star)
 const isHabitablePlanet = (planet) => {
   return (

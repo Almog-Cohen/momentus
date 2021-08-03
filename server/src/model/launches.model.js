@@ -13,7 +13,9 @@ const launch = {
   success: true,
 };
 
+// Return all laucnches from database
 const getAllLaunches = async () => {
+  console.log();
   return await launches.find({}, { _id: 0, __v: 0 });
 };
 
@@ -31,7 +33,7 @@ const saveLaunch = async (launch) => {
 
   if (!planet) throw new Error("No matching planet was found");
 
-  await launches.updateOne(
+  await launches.findOneAndUpdate(
     {
       flightNumber: launch.flightNumber,
     },
@@ -42,35 +44,44 @@ const saveLaunch = async (launch) => {
   );
 };
 
-const addNewLaunch = (launch) => {
-  lastestFlightNumber++;
-  launches.set(
-    lastestFlightNumber,
-    Object.assign(launch, {
-      success: true,
-      upcoming: true,
-      customers: ["Zero to mastery", "Nasa"],
-      flightNumber: lastestFlightNumber,
-    })
+// Add new launch object(with increament flight number) to the database
+const scheduleNewLaunch = async (launch) => {
+  const newFlightNumber = (await getLatestFlightNumber()) + 1;
+  const newLaunch = Object.assign(launch, {
+    success: true,
+    upcoming: true,
+    customers: ["SpaceX", "Nasa"],
+    flightNumber: newFlightNumber,
+  });
+
+  await saveLaunch(newLaunch);
+};
+
+// Check if this launch exists by id
+const existsLaunchById = async (launchId) => {
+  return await launches.findOne({ flightNumber: launchId });
+};
+
+// Abort the launch by id
+const abortLaunchById = async (launchId) => {
+  const aborted = await launches.updateOne(
+    {
+      flightNumber: launchId,
+    },
+    {
+      upcoming: false,
+      success: false,
+    }
   );
-};
-
-const existsLaunchById = (launchId) => {
-  return launches.has(launchId);
-};
-
-const abortLaunchById = (launchId) => {
-  const aborted = launches.get(launchId);
-  aborted.upcoming = false;
-  aborted.success = false;
-  return aborted;
+  // The aborted complete and modified only one document
+  return aborted.nModified === 1 && aborted.ok === 1;
 };
 
 saveLaunch(launch);
 
 module.exports = {
   getAllLaunches,
-  addNewLaunch,
+  scheduleNewLaunch,
   existsLaunchById,
   abortLaunchById,
 };
