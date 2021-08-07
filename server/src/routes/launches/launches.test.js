@@ -7,16 +7,16 @@ describe("Launches API", () => {
     await mongoConnect();
   });
 
-  describe("Test GET /launches", () => {
+  describe("Test GET /v1/launches", () => {
     test(`It should respond with 200 success`, async () => {
       const response = await request(app)
-        .get("/launches")
+        .get("/v1/launches")
         .expect("Content-Type", /json/)
         .expect(200);
     });
   });
 
-  describe("Test POST /launches", () => {
+  describe("Test POST /v1/launches", () => {
     const completLaunchData = {
       mission: `USS enterprise`,
       rocket: `NCC 1701-D`,
@@ -31,7 +31,7 @@ describe("Launches API", () => {
     };
     test(`It should be respond with 201 success`, async () => {
       const response = await request(app)
-        .post("/launches")
+        .post("/v1/launches")
         .send(completLaunchData);
 
       const requestDate = new Date(completLaunchData.launchDate).valueOf();
@@ -42,7 +42,7 @@ describe("Launches API", () => {
 
     test(`It is missing required launch field`, async () => {
       const response = await request(app)
-        .post("/launches")
+        .post("/v1/launches")
         .send(launchDataWithoutTheDate)
         .expect("Content-Type", /json/)
         .expect(400);
