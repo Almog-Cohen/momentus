@@ -64,7 +64,7 @@ const savePlanet = async (planet) => {
       }
     );
   } catch (error) {
-    console.error(`Could not save planet  ${error}`);
+    console.log(`Could not save planet  ${error}`);
   }
 };
 
