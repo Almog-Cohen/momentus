@@ -13,7 +13,7 @@ app.use(cors());
 app.use(morgan("combined"));
 app.use(express.json());
 
-app.use(helmet());
+// app.use(helmet());
 // Serving our frotend
 app.use(express.static(path.join(__dirname, "..", "public")));
 
@@ -22,6 +22,7 @@ app.use("/v1", api);
 
 // Send our homrpage route
 app.get("/*", (req, res) => {
+  console.log("Send html to the server");
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
 
