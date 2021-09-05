@@ -1,8 +1,6 @@
 const axios = require("axios");
-require("dotenv").config();
 const launches = require("./launches.mongo");
 const planets = require("./planets.mongo");
-
 const DEFAULT_FLIGHT_NUMBER = 100;
 
 // Return all laucnches from database

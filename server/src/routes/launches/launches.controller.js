@@ -1,10 +1,13 @@
-const { json } = require("express");
 const {
   getAllLaunches,
   scheduleNewLaunch,
   existsLaunchById,
   abortLaunchById,
 } = require("../../models/launches.model");
+const {
+  notifyNewLaunchEmail,
+  notiftyNewLaunchSms,
+} = require("../../models/twillioApi.model");
 const { getPagination } = require("../../services/query");
 
 const httpGetAllLaunches = async (req, res) => {
@@ -25,6 +28,8 @@ const httpAddNewLaunch = async (req, res) => {
   launch.launchDate = new Date(launch.launchDate);
   console.log(launch.launchDate);
   await scheduleNewLaunch(launch);
+  await notifyNewLaunchEmail(launch);
+  await notiftyNewLaunchSms(launch);
   return res.status(201).json(launch);
 };
 

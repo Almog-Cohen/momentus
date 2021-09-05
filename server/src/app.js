@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 
 // Logging requests
-app.use(morgan("combined"));
+// app.use(morgan("combined"));
 app.use(express.json());
 
 // app.use(helmet());
