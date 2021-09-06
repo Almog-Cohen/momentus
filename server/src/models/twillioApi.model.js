@@ -6,6 +6,7 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require("twilio")(accountSid, authToken);
 
+// Send sms to mangement list when new mission started
 const notiftyNewLaunchSms = async (launch) => {
   try {
     const mangementDetails = await getAllMangementDetails();
@@ -17,18 +18,23 @@ const notiftyNewLaunchSms = async (launch) => {
         `;
 
     mangementDetails.forEach(async (personDetails) => {
-      const message = await client.messages.create({
-        body: smsText,
-        from: "+16692018386",
-        to: personDetails.phoneNumber,
-      });
-      console.log(message.status);
+      try {
+        const message = await client.messages.create({
+          body: smsText,
+          from: "+16692018386",
+          to: personDetails.phoneNumber,
+        });
+        console.log(message.status);
+      } catch (error) {
+        console.error(error);
+      }
     });
   } catch (error) {
     console.error(error);
   }
 };
 
+// Send email to mangement list when new mission started
 const notifyNewLaunchEmail = async (launch) => {
   try {
     const mangementDetails = await getAllMangementDetails();
@@ -51,19 +57,12 @@ const notifyNewLaunchEmail = async (launch) => {
       const message = await sgMail.send(msg);
       console.log("Email sent");
     });
-
-    //   sgMail
-    //     .send(msg)
-    //     .then(() => {
-    //     })
-    //     .catch((error) => {
-    //       console.error(error);
-    //     });
   } catch (error) {
     console.error(error);
   }
 };
 
+// Getting all mangement details from db
 const getAllMangementDetails = async () => {
   return await managentNotifications.find({});
 };
@@ -72,19 +71,3 @@ module.exports = {
   notifyNewLaunchEmail,
   notiftyNewLaunchSms,
 };
-
-//   const person = {
-//     name: "Sigalit",
-//     phoneNumber: "+97254473662",
-//     email: "almogco94@gmail.com",
-//   };
-
-//   await managentNotifications.findOneAndUpdate(
-//     {
-//       email: person.email,
-//     },
-//     person,
-//     {
-//       upsert: true,
-//     }
-//   );

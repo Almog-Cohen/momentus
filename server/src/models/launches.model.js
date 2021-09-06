@@ -77,7 +77,7 @@ const populatedLaunches = async () => {
   });
 
   if (response.status !== 200) {
-    console.log("Problem downloading launches datap from SpaceX");
+    console.log("Problem downloading launches data from SpaceX");
     throw new Error("Launch data download failed");
   }
 
